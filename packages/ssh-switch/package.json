@@ -1,51 +1,24 @@
 {
-  "name": "qiao-llm-cli",
-  "version": "0.2.7",
-  "description": "llm cli tool",
+  "name": "ssh-switch",
+  "version": "0.0.1",
+  "description": "switch ssh key",
   "author": "uikoo9 <uikoo9@qq.com>",
-  "homepage": "https://code.vincentqiao.com/#qiao-llm-cli",
   "license": "MIT",
   "main": "index.js",
-  "module": "src/index.js",
-  "sideEffets": false,
-  "files": [
-    "bin",
-    "src"
-  ],
   "bin": {
-    "qllm": "./bin/qllm.js"
+    "sshs": "./bin/sshs.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uikoo9/qiao-llm.git"
+    "url": "git+https://github.com/uikoo9/ssh-switch.git"
   },
   "bugs": {
-    "url": "https://github.com/uikoo9/qiao-llm/issues"
+    "url": "https://github.com/uikoo9/ssh-switch/issues"
   },
-  "scripts": {
-    "build": "qpro rollup ./rollup.config.js"
-  },
+  "scripts": {},
   "dependencies": {
     "qiao-cli": "^5.0.0",
     "qiao-config": "^5.0.1",
-    "qiao-file": "^5.0.1",
-    "qiao-llm": "^0.2.5"
-  },
-  "nx": {
-    "namedInputs": {
-      "default": [
-        "{projectRoot}/src/**/*"
-      ]
-    },
-    "targets": {
-      "build": {
-        "inputs": [
-          "default"
-        ],
-        "outputs": [
-          "{projectRoot}/index.js"
-        ]
-      }
-    }
+    "qiao-file": "^5.0.1"
   }
 }

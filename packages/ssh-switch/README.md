@@ -1,7 +1,7 @@
-## qiao-llm-cli
+## ssh-switch
 
-[![npm version](https://img.shields.io/npm/v/qiao-llm-cli.svg?style=flat-square)](https://www.npmjs.org/package/qiao-llm-cli)
-[![npm downloads](https://img.shields.io/npm/dm/qiao-llm-cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao-llm-cli)
+[![npm version](https://img.shields.io/npm/v/ssh-switch.svg?style=flat-square)](https://www.npmjs.org/package/ssh-switch)
+[![npm downloads](https://img.shields.io/npm/dm/ssh-switch.svg?style=flat-square)](https://npm-stat.com/charts.html?package=ssh-switch)
 
 ll cli tool
 
@@ -11,28 +11,25 @@ ll cli tool
 
 ```shell
 # dev
-npm i -D qiao-llm-cli
+npm i -D ssh-switch
 
 # global
-npm i -g qiao-llm-cli
+npm i -g ssh-switch
 ```
 
 ## cli
 
 ```shell
 # 帮助
-qllm
-qllm -h
+sshs
+sshs -h
 
 # 添加
-qllm add
+sshs add
 
 # 列出
-qllm list
+sshs list
 
 # 移除
-qllm remove
-
-# 大模型对话
-qllm chat
+sshs remove
 ```
