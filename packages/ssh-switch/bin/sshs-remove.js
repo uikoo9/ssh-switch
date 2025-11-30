@@ -14,24 +14,24 @@ const remove = async () => {
     const questions = [
       {
         type: 'input',
-        name: 'modelName',
-        message: '请输入要删除的模型名称：',
+        name: 'SSHConfigName',
+        message: 'ssh config name',
       },
     ];
     const answers = await cli.ask(questions);
     console.log();
 
     // del
-    const dbKey = answers.modelName;
+    const dbKey = answers.SSHConfigName;
     await db.config(dbKey, null);
-    console.log(cli.colors.blue('模型已删除。'));
+    console.log(cli.colors.blue('delete ssh config success.'));
     console.log();
 
     // list
     const all = await db.all();
     console.log(all);
   } catch (e) {
-    console.log(cli.colors.red('删除模型出错。'));
+    console.log(cli.colors.red('delete ssh config error.'));
     console.log();
 
     console.log(e);
@@ -39,4 +39,4 @@ const remove = async () => {
 };
 
 // cmd
-cli.cmd.command('remove').description('删除一个模型').action(remove);
+cli.cmd.command('remove').description('delete ssh config').action(remove);

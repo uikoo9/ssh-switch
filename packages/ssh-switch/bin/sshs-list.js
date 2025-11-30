@@ -12,11 +12,11 @@ const list = async () => {
   try {
     // list
     const all = await db.all();
-    console.log(cli.colors.blue('目前已经添加的模型有：'));
+    console.log(cli.colors.blue('ssh-switch / list'));
     console.log();
     console.log(all);
   } catch (e) {
-    console.log(cli.colors.red('列出模型出错。'));
+    console.log(cli.colors.red('ssh-switch / list / error'));
     console.log();
 
     console.log(e);
@@ -24,4 +24,4 @@ const list = async () => {
 };
 
 // cmd
-cli.cmd.command('list').description('列出目前记录的模型信息').action(list);
+cli.cmd.command('list').description('list ssh configs').action(list);
