@@ -12,6 +12,6 @@ const DB = require('qiao-config');
  * @returns
  */
 exports.getDB = () => {
-  const dbPath = path.resolve(os.homedir(), './qllm.json');
+  const dbPath = path.resolve(os.homedir(), './sshs.json');
   return DB(dbPath);
 };

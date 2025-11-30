@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/ssh-switch.svg?style=flat-square)](https://www.npmjs.org/package/ssh-switch)
 [![npm downloads](https://img.shields.io/npm/dm/ssh-switch.svg?style=flat-square)](https://npm-stat.com/charts.html?package=ssh-switch)
 
-ll cli tool
+switch ssh key
 
 ## install
 
