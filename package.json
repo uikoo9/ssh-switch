@@ -1,5 +1,5 @@
 {
-  "name": "qiao-llm",
+  "name": "ssh-switch",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -18,18 +18,11 @@
     "check": "qpro ncu && lerna exec 'qpro ncu' --concurrency=1",
     "update": "qpro ncu u && lerna exec 'qpro ncu u' --concurrency=1",
     "pkg": "qpro pkg ./packages",
-    "dpkg": "qpro pkg ./packages dev",
-    "test:huoshan-normal": "npm run huoshan-normal -w test",
-    "test:huoshan-llm": "npm run huoshan-llm -w test",
-    "test:huoshan-translate": "npm run huoshan-translate -w test",
-    "test:huoshan-tools": "npm run huoshan-tools -w test",
-    "test:huoshan-qtools": "npm run huoshan-qtools -w test",
-    "test:huoshan-dtools": "npm run huoshan-dtools -w test"
+    "dpkg": "qpro pkg ./packages dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "ava": "^6.4.1",
     "husky": "^9.1.7",
     "lerna": "^9.0.1",
     "lint-staged": "^16.2.7",
