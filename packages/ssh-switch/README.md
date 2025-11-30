@@ -20,16 +20,19 @@ npm i -g ssh-switch
 ## cli
 
 ```shell
-# 帮助
+# help
 sshs
 sshs -h
 
-# 添加
+# add
 sshs add
 
-# 列出
+# list
 sshs list
 
-# 移除
+# remove
 sshs remove
+
+# use
+sshs use
 ```
