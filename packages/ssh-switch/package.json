@@ -1,13 +1,20 @@
 {
   "name": "ssh-switch",
   "version": "0.0.2",
-  "description": "switch ssh key",
+  "description": "A lightweight CLI tool to manage and switch between multiple SSH configurations easily.",
+  "keywords": [
+    "ssh",
+    "ssh-key",
+    "ssh-config",
+    "git",
+    "github",
+    "cli",
+    "switch",
+    "tool"
+  ],
   "author": "uikoo9 <uikoo9@qq.com>",
   "license": "MIT",
-  "main": "index.js",
-  "bin": {
-    "sshs": "./bin/sshs.js"
-  },
+  "homepage": "https://github.com/uikoo9/ssh-switch#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uikoo9/ssh-switch.git"
@@ -15,7 +22,17 @@
   "bugs": {
     "url": "https://github.com/uikoo9/ssh-switch/issues"
   },
-  "scripts": {},
+  "bin": {
+    "sshs": "./bin/sshs.js"
+  },
+  "files": [
+    "bin",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
     "qiao-cli": "^5.0.0",
     "qiao-config": "^5.0.1",

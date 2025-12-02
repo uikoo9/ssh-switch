@@ -3,36 +3,64 @@
 [![npm version](https://img.shields.io/npm/v/ssh-switch.svg?style=flat-square)](https://www.npmjs.org/package/ssh-switch)
 [![npm downloads](https://img.shields.io/npm/dm/ssh-switch.svg?style=flat-square)](https://npm-stat.com/charts.html?package=ssh-switch)
 
-switch ssh key
+A lightweight CLI tool to manage and switch between multiple SSH configurations easily.
 
-## install
-
-安装
+## Installation
 
 ```shell
-# dev
+# Install as dev dependency
 npm i -D ssh-switch
 
-# global
+# Install globally
 npm i -g ssh-switch
 ```
 
-## cli
+## Usage
 
 ```shell
-# help
+# Show help
 sshs
 sshs -h
 
-# add
+# Add a new SSH config
 sshs add
 
-# list
+# List all SSH configs
 sshs list
 
-# remove
-sshs remove
+# Show current SSH config in use
+sshs now
 
-# use
-sshs use
+# Switch to a specific config
+sshs use <configName>
+
+# Remove a config
+sshs remove <configName>
 ```
+
+## Example
+
+```shell
+# Add your work GitHub account
+$ sshs add
+? Enter a name for this SSH config: work
+? Host: github-work
+? Path to SSH private key file: ~/.ssh/id_rsa_work
+
+# Add your personal GitHub account
+$ sshs add
+? Enter a name for this SSH config: personal
+? Host: github-personal
+? Path to SSH private key file: ~/.ssh/id_rsa_personal
+
+# Switch to work account
+$ sshs use work
+
+# Check current config
+$ sshs now
+work is now in use
+```
+
+## License
+
+MIT
