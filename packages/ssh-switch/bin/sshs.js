@@ -6,6 +6,7 @@ const cli = require('qiao-cli');
 // cmds
 require('./sshs-add.js');
 require('./sshs-list.js');
+require('./sshs-now.js');
 require('./sshs-remove.js');
 require('./sshs-use.js');
 require('./sshs-version.js');

@@ -15,17 +15,17 @@ const add = async () => {
       {
         type: 'input',
         name: 'Name',
-        message: 'Custom SSH Config Name',
+        message: 'Enter a name for this SSH config:',
       },
       {
         type: 'input',
         name: 'Host',
-        message: 'Host',
+        message: 'Host:',
       },
       {
         type: 'input',
         name: 'IdentityFilePath',
-        message: 'IdentityFilePath',
+        message: 'Path to SSH private key file:',
       },
     ];
     const answers = await cli.ask(questions);
@@ -35,20 +35,20 @@ const add = async () => {
     const dbKey = answers.Name;
     const dbValue = await db.config(dbKey);
     if (dbValue) {
-      console.log(cli.colors.red('ssh config name already exists.'));
+      console.log(cli.colors.red('SSH config name already exists.'));
       return;
     }
 
     // set
     await db.config(dbKey, answers);
-    console.log(cli.colors.blue('add ssh config success.'));
+    console.log(cli.colors.blue('SSH config added successfully.'));
     console.log();
 
     // list
     const all = await db.all();
     console.log(all);
   } catch (e) {
-    console.log(cli.colors.red('add ssh config error.'));
+    console.log(cli.colors.red('Failed to add SSH config.'));
     console.log();
     console.log(e);
   }

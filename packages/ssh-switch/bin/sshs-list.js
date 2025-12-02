@@ -12,11 +12,11 @@ const list = async () => {
   try {
     // list
     const all = await db.all();
-    console.log(cli.colors.blue('ssh-switch / list'));
+    console.log(cli.colors.blue('SSH Configs:'));
     console.log();
     console.log(all);
   } catch (e) {
-    console.log(cli.colors.red('ssh-switch / list / error'));
+    console.log(cli.colors.red('Failed to list SSH configs.'));
     console.log();
 
     console.log(e);
