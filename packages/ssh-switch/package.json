@@ -1,6 +1,6 @@
 {
   "name": "ssh-switch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight CLI tool to manage and switch between multiple SSH configurations easily.",
   "keywords": [
     "ssh",
