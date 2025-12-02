@@ -44,13 +44,13 @@ sshs remove <configName>
 # Add your work GitHub account
 $ sshs add
 ? Enter a name for this SSH config: work
-? Host: github-work
+? Host: github.com
 ? Path to SSH private key file: ~/.ssh/id_rsa_work
 
 # Add your personal GitHub account
 $ sshs add
 ? Enter a name for this SSH config: personal
-? Host: github-personal
+? Host: github.com
 ? Path to SSH private key file: ~/.ssh/id_rsa_personal
 
 # Switch to work account

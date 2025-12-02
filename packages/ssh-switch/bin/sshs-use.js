@@ -34,7 +34,7 @@ const use = async (configName) => {
     const filePath = path.resolve(os.homedir(), './.ssh/config');
     const fileData = `
 Host ${dbValue.Host}
-  HostName github.com
+  HostName ${dbValue.Host}
   User git
   AddKeysToAgent yes
   UseKeychain yes
