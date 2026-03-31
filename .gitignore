@@ -4,6 +4,9 @@
 .AppleDouble
 .LSOverride
 
+# npm
+.npmrc
+
 # Icon must end with two \r
 Icon
 
