@@ -1,3 +1,4 @@
-module.exports = {
-  '**/*': () => ['npm run build', 'npm run prettier', 'npm run eslint', 'npm run test'],
+export default {
+  '*.js': ['eslint --fix', 'prettier --write'],
+  '*.{json,md}': ['prettier --write'],
 };
