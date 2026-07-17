@@ -34,9 +34,41 @@ sshs now
 # Switch to a specific config
 sshs use <configName>
 
+# Set or clear a proxy for a config
+sshs proxy <configName> <host:port>   # e.g. 127.0.0.1:7897
+sshs proxy <configName> off           # disable proxy
+
 # Remove a config
 sshs remove <configName>
 ```
+
+## Proxy
+
+Each config can carry optional proxy settings, useful when SSH to a host is slow
+or blocked and you want it to go through a local HTTP/SOCKS proxy (Clash, etc.):
+
+| Field      | Meaning                                                      |
+| ---------- | ------------------------------------------------------------ |
+| `Proxy`    | `host:port` — emitted as `ProxyCommand nc -X connect -x ...` |
+| `HostName` | override the connect host (e.g. `ssh.github.com`)            |
+| `Port`     | override the port (e.g. `443`)                               |
+
+Set them interactively via `sshs add`, or afterwards with `sshs proxy`:
+
+```shell
+# Route GitHub SSH through a local proxy on port 7897, over port 443
+# (--github expands to HostName ssh.github.com + Port 443)
+$ sshs proxy work 127.0.0.1:7897 --github
+
+# Custom host/port
+$ sshs proxy work 127.0.0.1:7897 --hostname ssh.github.com --port 443
+
+# Disable the proxy
+$ sshs proxy work off
+```
+
+If the target config is the active one, `sshs proxy` re-writes `~/.ssh/config`
+immediately; otherwise run `sshs use <configName>` to apply.
 
 ## Example
 

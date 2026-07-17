@@ -14,6 +14,7 @@ program.version(pkg.version, '-v, --version').description('ssh switch').usage('<
 import './sshs-add.js';
 import './sshs-list.js';
 import './sshs-now.js';
+import './sshs-proxy.js';
 import './sshs-remove.js';
 import './sshs-use.js';
 
